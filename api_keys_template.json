@@ -1,0 +1,22 @@
+{
+  "openai": {
+    "api-key": "<OPENAI_API_KEY>",
+    "model": "gpt-4o",
+    "max_tokens": 32768
+  },
+  "gemini": {
+    "api-key": "<GEMINI_API_KEY>",
+    "model": "gemini-2.5-pro",
+    "max_tokens": 32768
+  },
+  "claude": {
+    "api-key": "<CLAUDE_API_KEY>",
+    "model": "claude-sonnet-4-20250514",
+    "max_tokens": 32768
+  },
+  "langsmith": {
+    "api-key": "<LANGSMITH_API_KEY>",
+    "project": "criteria-analyzer",
+    "endpoint": "https://api.smith.langchain.com"
+  }
+}

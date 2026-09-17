@@ -1,0 +1,16 @@
+# Pinned to the LangChain 0.3 line.
+#
+# These were previously unpinned, which made a fresh install unusable: pip
+# resolved langchain 1.x, where `langchain.globals` no longer exists, so
+# `services/cache_service.py` failed at import and nothing in the project
+# would start. langchain-community was also missing entirely despite being
+# imported by that same module.
+#
+# Upper bounds are deliberate — 1.x is a breaking API change, not a drop-in.
+langchain>=0.3,<0.4
+langchain-community>=0.3,<0.4      # SQLiteCache, used by services/cache_service.py
+langchain-openai>=0.3,<0.4
+langchain-google-genai>=2.1,<3
+langchain-anthropic>=0.3,<0.4
+langsmith>=0.3,<0.5
+pydantic>=2.0,<3                   # schemas/ are Pydantic v2 models

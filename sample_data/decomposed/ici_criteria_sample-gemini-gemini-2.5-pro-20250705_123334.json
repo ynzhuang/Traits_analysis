@@ -1,0 +1,722 @@
+{
+  "NCT03191786": {
+    "trial_id": "NCT03191786",
+    "criteria": [
+      {
+        "type": "inclusion",
+        "original_text": "Histologically or cytologically confirmed diagnosis of advanced or recurrent (Stage IIIB not amenable for multimodality treatment) or metastatic (Stage IV) NSCLC as per the American Joint Committee on Cancer (AJCC) 7th edition",
+        "logic": "(diagnosis == \"NSCLC\") AND (stage == \"IIIB or IV\")",
+        "traits": [
+          {
+            "trait": "Diagnosis",
+            "category": "Diagnosis/Disease",
+            "value": "NSCLC",
+            "source_text": "Histologically or cytologically confirmed diagnosis of ... NSCLC",
+            "original_trait_phrase": "diagnosis",
+            "original_value_phrase": "NSCLC"
+          },
+          {
+            "trait": "Stage",
+            "category": "Diagnosis/Disease",
+            "value": "IIIB or IV",
+            "source_text": "advanced or recurrent (Stage IIIB not amenable for multimodality treatment) or metastatic (Stage IV)",
+            "original_trait_phrase": "Stage",
+            "original_value_phrase": "advanced or recurrent (Stage IIIB not amenable for multimodality treatment) or metastatic (Stage IV)"
+          }
+        ]
+      },
+      {
+        "type": "inclusion",
+        "original_text": "No sensitizing epidermal growth factor receptor (EGFR) mutation (L858R or exon 19 deletions) or anaplastic lymphoma kinase (ALK) fusion oncogene detected",
+        "logic": "(egfr_mutation == \"negative\") AND (alk_fusion == \"negative\")",
+        "traits": [
+          {
+            "trait": "EGFR mutation",
+            "category": "Biomarkers/Molecular",
+            "value": "negative",
+            "source_text": "No sensitizing epidermal growth factor receptor (EGFR) mutation (L858R or exon 19 deletions)",
+            "original_trait_phrase": "sensitizing epidermal growth factor receptor (EGFR) mutation (L858R or exon 19 deletions)",
+            "original_value_phrase": "No ... detected"
+          },
+          {
+            "trait": "ALK fusion",
+            "category": "Biomarkers/Molecular",
+            "value": "negative",
+            "source_text": "anaplastic lymphoma kinase (ALK) fusion oncogene detected",
+            "original_trait_phrase": "anaplastic lymphoma kinase (ALK) fusion oncogene",
+            "original_value_phrase": "No ... detected"
+          }
+        ]
+      },
+      {
+        "type": "inclusion",
+        "original_text": "No prior systemic treatment for advanced or recurrent (Stage IIIB not amenable for multimodality treatment) or metastatic (Stage IV) NSCLC as per the AJCC 7th edition",
+        "logic": "(prior_systemic_treatment_for_advanced_nsclc == \"none\")",
+        "traits": [
+          {
+            "trait": "Prior systemic treatment for advanced NSCLC",
+            "category": "Prior/Concurrent Treatments",
+            "value": "none",
+            "source_text": "No prior systemic treatment for advanced or recurrent (Stage IIIB not amenable for multimodality treatment) or metastatic (Stage IV) NSCLC",
+            "original_trait_phrase": "prior systemic treatment for advanced or recurrent (Stage IIIB not amenable for multimodality treatment) or metastatic (Stage IV) NSCLC",
+            "original_value_phrase": "No"
+          }
+        ]
+      },
+      {
+        "type": "inclusion",
+        "original_text": "Life expectancy greater than or equal to (>/=) 8 weeks",
+        "logic": "(life_expectancy >= \"8 weeks\")",
+        "traits": [
+          {
+            "trait": "Life expectancy",
+            "category": "Other",
+            "value": ">=8 weeks",
+            "source_text": "Life expectancy greater than or equal to (>/=) 8 weeks",
+            "original_trait_phrase": "Life expectancy",
+            "original_value_phrase": "greater than or equal to (>/=) 8 weeks"
+          }
+        ]
+      },
+      {
+        "type": "inclusion",
+        "original_text": "Deemed unsuitable by the investigator for any platinum-doublet chemotherapy due to poor performance status (ECOG performance status of 2-3). However, participants >= 70 years of age who have an ECOG PS of 0 or 1 may be included due to: a) substantial comorbidities; b) contraindication(s) for any platinum-doublet chemotherapy",
+        "logic": "(unsuitable_for_platinum_doublet_chemo == True)",
+        "traits": [
+          {
+            "trait": "Suitability for platinum-doublet chemo",
+            "category": "Other",
+            "value": "unsuitable",
+            "source_text": "Deemed unsuitable by the investigator for any platinum-doublet chemotherapy",
+            "original_trait_phrase": "Deemed unsuitable by the investigator for any platinum-doublet chemotherapy",
+            "original_value_phrase": "unsuitable"
+          },
+          {
+            "trait": "ECOG PS",
+            "category": "Performance Status/Functional Status",
+            "value": "2-3",
+            "source_text": "ECOG performance status of 2-3",
+            "original_trait_phrase": "ECOG performance status",
+            "original_value_phrase": "2-3"
+          },
+          {
+            "trait": "Age",
+            "category": "Demographics",
+            "value": ">=70",
+            "source_text": "participants >= 70 years of age",
+            "original_trait_phrase": "age",
+            "original_value_phrase": ">= 70 years"
+          },
+          {
+            "trait": "ECOG PS",
+            "category": "Performance Status/Functional Status",
+            "value": "0-1",
+            "source_text": "ECOG PS of 0 or 1",
+            "original_trait_phrase": "ECOG PS",
+            "original_value_phrase": "0 or 1"
+          },
+          {
+            "trait": "Substantial comorbidities",
+            "category": "Comorbidities",
+            "value": "present",
+            "source_text": "substantial comorbidities",
+            "original_trait_phrase": "substantial comorbidities",
+            "original_value_phrase": "present"
+          },
+          {
+            "trait": "Contraindications for platinum-doublet chemo",
+            "category": "Prior/Concurrent Treatments",
+            "value": "present",
+            "source_text": "contraindication(s) for any platinum-doublet chemotherapy",
+            "original_trait_phrase": "contraindication(s) for any platinum-doublet chemotherapy",
+            "original_value_phrase": "present"
+          }
+        ]
+      },
+      {
+        "type": "inclusion",
+        "original_text": "Representative formalin-fixed paraffin-embedded (FPPE) tumor tissue block obtained during course of disease (archival tissue) or at screening",
+        "logic": "(tumor_tissue_sample == \"available\")",
+        "traits": [
+          {
+            "trait": "Tumor tissue sample",
+            "category": "Procedures",
+            "value": "available",
+            "source_text": "Representative formalin-fixed paraffin-embedded (FPPE) tumor tissue block obtained during course of disease (archival tissue) or at screening",
+            "original_trait_phrase": "Representative formalin-fixed paraffin-embedded (FPPE) tumor tissue block",
+            "original_value_phrase": "obtained during course of disease (archival tissue) or at screening"
+          }
+        ]
+      },
+      {
+        "type": "inclusion",
+        "original_text": "Participants with treated, asymptomatic central nervous system (CNS) metastases are eligible, provided they meet all of the following criteria: Measurable disease outside CNS; Only supratentorial and cerebellar metastases allowed; No ongoing requirement for corticosteroids as therapy for CNS disease; No stereotactic radiation within 7 days or whole-brain radiation within 14 days prior to randomization; No evidence of interim progression between the completion of CNS-directed therapy and the screening radiographic study",
+        "logic": "(cns_metastases_status == \"treated_and_asymptomatic\") AND (measurable_disease_outside_cns == True) AND (corticosteroid_use_for_cns_disease == \"none\") AND (time_since_stereotactic_radiation > \"7 days\") AND (time_since_whole_brain_radiation > \"14 days\") AND (cns_disease_progression == \"none\")",
+        "traits": [
+          {
+            "trait": "CNS metastases status",
+            "category": "Diagnosis/Disease",
+            "value": "treated and asymptomatic",
+            "source_text": "treated, asymptomatic central nervous system (CNS) metastases",
+            "original_trait_phrase": "central nervous system (CNS) metastases",
+            "original_value_phrase": "treated, asymptomatic"
+          },
+          {
+            "trait": "Measurable disease location",
+            "category": "Diagnosis/Disease",
+            "value": "outside CNS",
+            "source_text": "Measurable disease outside CNS",
+            "original_trait_phrase": "Measurable disease",
+            "original_value_phrase": "outside CNS"
+          },
+          {
+            "trait": "CNS metastases location",
+            "category": "Diagnosis/Disease",
+            "value": "supratentorial and cerebellar only",
+            "source_text": "Only supratentorial and cerebellar metastases allowed",
+            "original_trait_phrase": "metastases",
+            "original_value_phrase": "Only supratentorial and cerebellar metastases allowed"
+          },
+          {
+            "trait": "Corticosteroid use for CNS disease",
+            "category": "Medications",
+            "value": "none",
+            "source_text": "No ongoing requirement for corticosteroids as therapy for CNS disease",
+            "original_trait_phrase": "corticosteroids as therapy for CNS disease",
+            "original_value_phrase": "No ongoing requirement"
+          },
+          {
+            "trait": "Time since stereotactic radiation",
+            "category": "Prior/Concurrent Treatments",
+            "value": ">7 days",
+            "source_text": "No stereotactic radiation within 7 days",
+            "original_trait_phrase": "stereotactic radiation",
+            "original_value_phrase": "No ... within 7 days"
+          },
+          {
+            "trait": "Time since whole-brain radiation",
+            "category": "Prior/Concurrent Treatments",
+            "value": ">14 days",
+            "source_text": "whole-brain radiation within 14 days prior to randomization",
+            "original_trait_phrase": "whole-brain radiation",
+            "original_value_phrase": "No ... within 14 days"
+          },
+          {
+            "trait": "CNS disease progression",
+            "category": "Diagnosis/Disease",
+            "value": "none",
+            "source_text": "No evidence of interim progression between the completion of CNS-directed therapy and the screening radiographic study",
+            "original_trait_phrase": "interim progression",
+            "original_value_phrase": "No evidence of"
+          }
+        ]
+      },
+      {
+        "type": "inclusion",
+        "original_text": "Adequate hematologic and end organ function",
+        "logic": "(hematologic_and_end_organ_function == \"adequate\")",
+        "traits": [
+          {
+            "trait": "Hematologic and end organ function",
+            "category": "Organ Function",
+            "value": "adequate",
+            "source_text": "Adequate hematologic and end organ function",
+            "original_trait_phrase": "hematologic and end organ function",
+            "original_value_phrase": "Adequate"
+          }
+        ]
+      },
+      {
+        "type": "inclusion",
+        "original_text": "Female participants of childbearing potential randomized to the atezolizumab treatment arm agree to use protocol defined methods of contraception",
+        "logic": "(contraception_agreement == \"agreed\")",
+        "traits": [
+          {
+            "trait": "Contraception agreement",
+            "category": "Reproductive/Pregnancy Status",
+            "value": "agreed",
+            "source_text": "Female participants of childbearing potential randomized to the atezolizumab treatment arm agree to use protocol defined methods of contraception",
+            "original_trait_phrase": "Female participants of childbearing potential ... agree to use protocol defined methods of contraception",
+            "original_value_phrase": "agree"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Participants younger than 70 years who have an ECOG performance status of 0 or 1",
+        "logic": "(age < 70) AND (ecog_ps IN [\"0\", \"1\"])",
+        "traits": [
+          {
+            "trait": "Age",
+            "category": "Demographics",
+            "value": "<70",
+            "source_text": "Participants younger than 70 years",
+            "original_trait_phrase": "age",
+            "original_value_phrase": "younger than 70 years"
+          },
+          {
+            "trait": "ECOG PS",
+            "category": "Performance Status/Functional Status",
+            "value": "0-1",
+            "source_text": "ECOG performance status of 0 or 1",
+            "original_trait_phrase": "ECOG performance status",
+            "original_value_phrase": "0 or 1"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Active or untreated CNS metastases as determined by computed tomography (CT) or magnetic resonance imaging (MRI) evaluation of the brain during screening and prior radiographic assessments",
+        "logic": "(cns_metastases_status == \"active_or_untreated\")",
+        "traits": [
+          {
+            "trait": "CNS metastases status",
+            "category": "Diagnosis/Disease",
+            "value": "active or untreated",
+            "source_text": "Active or untreated CNS metastases",
+            "original_trait_phrase": "CNS metastases",
+            "original_value_phrase": "Active or untreated"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Uncontrolled tumor-related pain",
+        "logic": "(tumor_related_pain == \"uncontrolled\")",
+        "traits": [
+          {
+            "trait": "Tumor-related pain",
+            "category": "Comorbidities",
+            "value": "uncontrolled",
+            "source_text": "Uncontrolled tumor-related pain",
+            "original_trait_phrase": "tumor-related pain",
+            "original_value_phrase": "Uncontrolled"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Uncontrolled pleural effusion, pericardial effusion, or ascites requiring recurrent drainage procedures (once monthly or more frequently)",
+        "logic": "(pleural_effusion == \"uncontrolled\") OR (pericardial_effusion == \"uncontrolled\") OR (ascites == \"uncontrolled\")",
+        "traits": [
+          {
+            "trait": "Pleural effusion",
+            "category": "Comorbidities",
+            "value": "uncontrolled",
+            "source_text": "Uncontrolled pleural effusion ... requiring recurrent drainage procedures (once monthly or more frequently)",
+            "original_trait_phrase": "pleural effusion",
+            "original_value_phrase": "Uncontrolled ... requiring recurrent drainage procedures (once monthly or more frequently)"
+          },
+          {
+            "trait": "Pericardial effusion",
+            "category": "Comorbidities",
+            "value": "uncontrolled",
+            "source_text": "pericardial effusion ... requiring recurrent drainage procedures (once monthly or more frequently)",
+            "original_trait_phrase": "pericardial effusion",
+            "original_value_phrase": "Uncontrolled ... requiring recurrent drainage procedures (once monthly or more frequently)"
+          },
+          {
+            "trait": "Ascites",
+            "category": "Comorbidities",
+            "value": "uncontrolled",
+            "source_text": "ascites requiring recurrent drainage procedures (once monthly or more frequently)",
+            "original_trait_phrase": "ascites",
+            "original_value_phrase": "Uncontrolled ... requiring recurrent drainage procedures (once monthly or more frequently)"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Uncontrolled or symptomatic hyerpcalcemia (ionized calcium > 1.5 mmol/L or calcium >12 mg/dL or corrected serum calcium >ULN)",
+        "logic": "(hypercalcemia == \"uncontrolled_or_symptomatic\")",
+        "traits": [
+          {
+            "trait": "Hypercalcemia",
+            "category": "Laboratory",
+            "value": "uncontrolled or symptomatic",
+            "source_text": "Uncontrolled or symptomatic hyerpcalcemia (ionized calcium > 1.5 mmol/L or calcium >12 mg/dL or corrected serum calcium >ULN)",
+            "original_trait_phrase": "hyerpcalcemia",
+            "original_value_phrase": "Uncontrolled or symptomatic (ionized calcium > 1.5 mmol/L or calcium >12 mg/dL or corrected serum calcium >ULN)"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "History of other malignancy within 5 years prior to screening, with the exception of those with a negligible risk of metastasis or death treated with expected curative outcome",
+        "logic": "(history_of_other_malignancy_within_5_years == True)",
+        "traits": [
+          {
+            "trait": "History of other malignancy within 5 years",
+            "category": "Comorbidities",
+            "value": "present with exceptions",
+            "source_text": "History of other malignancy within 5 years prior to screening, with the exception of those with a negligible risk of metastasis or death treated with expected curative outcome",
+            "original_trait_phrase": "History of other malignancy",
+            "original_value_phrase": "within 5 years prior to screening, with the exception of those with a negligible risk of metastasis or death treated with expected curative outcome"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "National Cancer Institute Common Terminology Criteria for Adverse Events (NCI CTCAE) version 4.0 (v4.0) Grade 3 or higher toxicities due to any prior therapy (example [e.g.], radiotherapy) (excluding alopecia), which have not shown improvement and are strictly considered to interfere with current study medication",
+        "logic": "(prior_therapy_toxicity_grade >= 3)",
+        "traits": [
+          {
+            "trait": "Prior therapy toxicity",
+            "category": "Prior/Concurrent Treatments",
+            "value": ">=Grade 3 and unresolved",
+            "source_text": "Grade 3 or higher toxicities due to any prior therapy (example [e.g.], radiotherapy) (excluding alopecia), which have not shown improvement and are strictly considered to interfere with current study medication",
+            "original_trait_phrase": "toxicities due to any prior therapy",
+            "original_value_phrase": "Grade 3 or higher ... which have not shown improvement and are strictly considered to interfere with current study medication"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Participants who have received prior neo-adjuvant, adjuvant chemotherapy, radiotherapy, or chemoradiotherapy with curative intent for non-metastatic disease must have experienced a treatment-free interval of at least 6 months from randomization since the last chemotherapy, radiotherapy, or chemoradiotherapy",
+        "logic": "(treatment_free_interval_from_prior_therapy < \"6 months\")",
+        "traits": [
+          {
+            "trait": "Treatment-free interval from prior therapy",
+            "category": "Prior/Concurrent Treatments",
+            "value": "<6 months",
+            "source_text": "must have experienced a treatment-free interval of at least 6 months from randomization since the last chemotherapy, radiotherapy, or chemoradiotherapy",
+            "original_trait_phrase": "treatment-free interval",
+            "original_value_phrase": "at least 6 months"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "History of autoimmune disease except autoimmune-related hypothyroidism and controlled Type I diabetes mellitus",
+        "logic": "(history_of_autoimmune_disease == True)",
+        "traits": [
+          {
+            "trait": "History of autoimmune disease",
+            "category": "Comorbidities",
+            "value": "present with exceptions",
+            "source_text": "History of autoimmune disease except autoimmune-related hypothyroidism and controlled Type I diabetes mellitus",
+            "original_trait_phrase": "History of autoimmune disease",
+            "original_value_phrase": "except autoimmune-related hypothyroidism and controlled Type I diabetes mellitus"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "History of idiopathic pulmonary fibrosis (IPF), organizing pneumonia (e.g., bronchiolitis obliterans), drug-induced pneumonitis, idiopathic pneumonitis, or evidence of active pneumonitis",
+        "logic": "(history_of_ipf == True) OR (history_of_organizing_pneumonia == True) OR (history_of_drug_induced_pneumonitis == True) OR (history_of_idiopathic_pneumonitis == True) OR (active_pneumonitis == True)",
+        "traits": [
+          {
+            "trait": "History of specific pulmonary conditions",
+            "category": "Comorbidities",
+            "value": "present",
+            "source_text": "History of idiopathic pulmonary fibrosis (IPF), organizing pneumonia (e.g., bronchiolitis obliterans), drug-induced pneumonitis, idiopathic pneumonitis, or evidence of active pneumonitis",
+            "original_trait_phrase": "History of idiopathic pulmonary fibrosis (IPF), organizing pneumonia (e.g., bronchiolitis obliterans), drug-induced pneumonitis, idiopathic pneumonitis, or evidence of active pneumonitis",
+            "original_value_phrase": "present"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Known positivity for human immunodeficiency virus (HIV)",
+        "logic": "(hiv_status == \"positive\")",
+        "traits": [
+          {
+            "trait": "HIV status",
+            "category": "Infection/Immunization",
+            "value": "positive",
+            "source_text": "Known positivity for human immunodeficiency virus (HIV)",
+            "original_trait_phrase": "positivity for human immunodeficiency virus (HIV)",
+            "original_value_phrase": "Known"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Known active hepatitis B or hepatitis C",
+        "logic": "(hepatitis_b_status == \"active\") OR (hepatitis_c_status == \"active\")",
+        "traits": [
+          {
+            "trait": "Hepatitis B status",
+            "category": "Infection/Immunization",
+            "value": "active",
+            "source_text": "Known active hepatitis B",
+            "original_trait_phrase": "hepatitis B",
+            "original_value_phrase": "Known active"
+          },
+          {
+            "trait": "Hepatitis C status",
+            "category": "Infection/Immunization",
+            "value": "active",
+            "source_text": "hepatitis C",
+            "original_trait_phrase": "hepatitis C",
+            "original_value_phrase": "Known active"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Active tuberculosis",
+        "logic": "(tuberculosis_status == \"active\")",
+        "traits": [
+          {
+            "trait": "Tuberculosis status",
+            "category": "Infection/Immunization",
+            "value": "active",
+            "source_text": "Active tuberculosis",
+            "original_trait_phrase": "tuberculosis",
+            "original_value_phrase": "Active"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Severe infections within 4 weeks prior to randomization",
+        "logic": "(recent_severe_infections == True)",
+        "traits": [
+          {
+            "trait": "Recent severe infections",
+            "category": "Infection/Immunization",
+            "value": "present",
+            "source_text": "Severe infections within 4 weeks prior to randomization",
+            "original_trait_phrase": "Severe infections",
+            "original_value_phrase": "within 4 weeks prior to randomization"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Significant cardiovascular disease, such as New York Heart Association (NYHA) cardiac disease (Class II or greater), myocardial infarction within 3 months prior to randomization, unstable arrhythmias, or unstable angina",
+        "logic": "(nyha_class >= \"II\") OR (myocardial_infarction_within_3_months == True) OR (unstable_arrhythmias == True) OR (unstable_angina == True)",
+        "traits": [
+          {
+            "trait": "Significant cardiovascular disease",
+            "category": "Comorbidities",
+            "value": "present",
+            "source_text": "Significant cardiovascular disease, such as New York Heart Association (NYHA) cardiac disease (Class II or greater), myocardial infarction within 3 months prior to randomization, unstable arrhythmias, or unstable angina",
+            "original_trait_phrase": "Significant cardiovascular disease",
+            "original_value_phrase": "present"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Major surgical procedure other than for diagnosis within 4 weeks prior to randomization or anticipation of need for a major surgical procedure during the course of the study",
+        "logic": "(recent_major_surgery_within_4_weeks == True) OR (anticipated_major_surgery == True)",
+        "traits": [
+          {
+            "trait": "Recent major surgery",
+            "category": "Procedures",
+            "value": "present",
+            "source_text": "Major surgical procedure other than for diagnosis within 4 weeks prior to randomization",
+            "original_trait_phrase": "Major surgical procedure",
+            "original_value_phrase": "within 4 weeks prior to randomization"
+          },
+          {
+            "trait": "Anticipated major surgery",
+            "category": "Procedures",
+            "value": "present",
+            "source_text": "anticipation of need for a major surgical procedure during the course of the study",
+            "original_trait_phrase": "anticipation of need for a major surgical procedure",
+            "original_value_phrase": "present"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Prior allogeneic bone marrow transplantation or solid organ transplant",
+        "logic": "(prior_allogeneic_bmt == True) OR (prior_solid_organ_transplant == True)",
+        "traits": [
+          {
+            "trait": "Prior allogeneic BMT",
+            "category": "Prior/Concurrent Treatments",
+            "value": "present",
+            "source_text": "Prior allogeneic bone marrow transplantation",
+            "original_trait_phrase": "Prior allogeneic bone marrow transplantation",
+            "original_value_phrase": "present"
+          },
+          {
+            "trait": "Prior solid organ transplant",
+            "category": "Prior/Concurrent Treatments",
+            "value": "present",
+            "source_text": "solid organ transplant",
+            "original_trait_phrase": "solid organ transplant",
+            "original_value_phrase": "Prior"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Participants with an illness or condition that may interfere with capacity or compliance with the study protocol, as per investigator's judgment",
+        "logic": "(interfering_condition == True)",
+        "traits": [
+          {
+            "trait": "Interfering condition",
+            "category": "Other",
+            "value": "present",
+            "source_text": "Participants with an illness or condition that may interfere with capacity or compliance with the study protocol, as per investigator's judgment",
+            "original_trait_phrase": "illness or condition that may interfere with capacity or compliance with the study protocol",
+            "original_value_phrase": "present, as per investigator's judgment"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Treatment with any other investigational agent or participation in another clinical study with therapeutic intent within 28 days prior to randomization",
+        "logic": "(concurrent_investigational_agent_or_study == True)",
+        "traits": [
+          {
+            "trait": "Concurrent investigational agent or study",
+            "category": "Prior/Concurrent Treatments",
+            "value": "present",
+            "source_text": "Treatment with any other investigational agent or participation in another clinical study with therapeutic intent within 28 days prior to randomization",
+            "original_trait_phrase": "Treatment with any other investigational agent or participation in another clinical study with therapeutic intent",
+            "original_value_phrase": "within 28 days prior to randomization"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "History of severe allergic, anaphylactic, or other hypersensitivity reactions to chimeric or humanized antibodies or fusion proteins",
+        "logic": "(history_of_hypersensitivity_to_antibodies == True)",
+        "traits": [
+          {
+            "trait": "History of hypersensitivity to antibodies",
+            "category": "Comorbidities",
+            "value": "present",
+            "source_text": "History of severe allergic, anaphylactic, or other hypersensitivity reactions to chimeric or humanized antibodies or fusion proteins",
+            "original_trait_phrase": "History of severe allergic, anaphylactic, or other hypersensitivity reactions to chimeric or humanized antibodies or fusion proteins",
+            "original_value_phrase": "present"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Known hypersensitivity to biopharmaceuticals produced in Chinese hamster ovary cells or any component of the atezolizumab formulation",
+        "logic": "(hypersensitivity_to_atezolizumab_components == True)",
+        "traits": [
+          {
+            "trait": "Hypersensitivity to atezolizumab components",
+            "category": "Medications",
+            "value": "present",
+            "source_text": "Known hypersensitivity to biopharmaceuticals produced in Chinese hamster ovary cells or any component of the atezolizumab formulation",
+            "original_trait_phrase": "hypersensitivity to biopharmaceuticals produced in Chinese hamster ovary cells or any component of the atezolizumab formulation",
+            "original_value_phrase": "Known"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Oral or IV antibiotic treatment",
+        "logic": "(antibiotic_treatment == \"oral_or_iv\")",
+        "traits": [
+          {
+            "trait": "Antibiotic treatment",
+            "category": "Medications",
+            "value": "present",
+            "source_text": "Oral or IV antibiotic treatment",
+            "original_trait_phrase": "Oral or IV antibiotic treatment",
+            "original_value_phrase": "present"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Administration of a live, attenuated vaccine within 4 weeks before randomization or anticipation that such a live attenuated vaccine will be required during the study",
+        "logic": "(recent_live_vaccine == True) OR (anticipated_live_vaccine == True)",
+        "traits": [
+          {
+            "trait": "Recent live vaccine",
+            "category": "Infection/Immunization",
+            "value": "present",
+            "source_text": "Administration of a live, attenuated vaccine within 4 weeks before randomization",
+            "original_trait_phrase": "Administration of a live, attenuated vaccine",
+            "original_value_phrase": "within 4 weeks before randomization"
+          },
+          {
+            "trait": "Anticipated live vaccine",
+            "category": "Infection/Immunization",
+            "value": "present",
+            "source_text": "anticipation that such a live attenuated vaccine will be required during the study",
+            "original_trait_phrase": "anticipation that such a live attenuated vaccine will be required during the study",
+            "original_value_phrase": "present"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Prior treatment with cluster of differentiation 137 (CD137) agonists or immune checkpoint blockade therapies, anti-programmed death-1 (anti-PD-1), and anti-PD-L1 therapeutic antibodies",
+        "logic": "(prior_immunotherapy == True)",
+        "traits": [
+          {
+            "trait": "Prior immunotherapy",
+            "category": "Prior/Concurrent Treatments",
+            "value": "present",
+            "source_text": "Prior treatment with cluster of differentiation 137 (CD137) agonists or immune checkpoint blockade therapies, anti-programmed death-1 (anti-PD-1), and anti-PD-L1 therapeutic antibodies",
+            "original_trait_phrase": "Prior treatment with cluster of differentiation 137 (CD137) agonists or immune checkpoint blockade therapies, anti-programmed death-1 (anti-PD-1), and anti-PD-L1 therapeutic antibodies",
+            "original_value_phrase": "present"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Treatment with systemic immunostimulatory agents within 4 weeks or 5 half-lives of the drug, whichever is shorter, prior to randomization",
+        "logic": "(recent_systemic_immunostimulatory_agents == True)",
+        "traits": [
+          {
+            "trait": "Recent systemic immunostimulatory agents",
+            "category": "Prior/Concurrent Treatments",
+            "value": "present",
+            "source_text": "Treatment with systemic immunostimulatory agents within 4 weeks or 5 half-lives of the drug, whichever is shorter, prior to randomization",
+            "original_trait_phrase": "Treatment with systemic immunostimulatory agents",
+            "original_value_phrase": "within 4 weeks or 5 half-lives of the drug, whichever is shorter, prior to randomization"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Treatment with systemic corticosteroids or other immunosuppressive medications",
+        "logic": "(concurrent_systemic_corticosteroids_or_immunosuppressants == True)",
+        "traits": [
+          {
+            "trait": "Concurrent systemic corticosteroids or immunosuppressants",
+            "category": "Medications",
+            "value": "present",
+            "source_text": "Treatment with systemic corticosteroids or other immunosuppressive medications",
+            "original_trait_phrase": "Treatment with systemic corticosteroids or other immunosuppressive medications",
+            "original_value_phrase": "present"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Participants not willing to stop treatment with traditional herbal medicines",
+        "logic": "(willingness_to_stop_herbal_medicines == \"no\")",
+        "traits": [
+          {
+            "trait": "Willingness to stop herbal medicines",
+            "category": "Medications",
+            "value": "no",
+            "source_text": "Participants not willing to stop treatment with traditional herbal medicines",
+            "original_trait_phrase": "willing to stop treatment with traditional herbal medicines",
+            "original_value_phrase": "not willing"
+          }
+        ]
+      },
+      {
+        "type": "exclusion",
+        "original_text": "Known sensitivity and contraindications to the 2 comparative chemotherapy agents (that is [i.e.] vinorelbine, oral or intravenous, and gemcitabine, intravenous)",
+        "logic": "(contraindications_to_chemotherapy == True)",
+        "traits": [
+          {
+            "trait": "Contraindications to chemotherapy",
+            "category": "Prior/Concurrent Treatments",
+            "value": "present",
+            "source_text": "Known sensitivity and contraindications to the 2 comparative chemotherapy agents (that is [i.e.] vinorelbine, oral or intravenous, and gemcitabine, intravenous)",
+            "original_trait_phrase": "sensitivity and contraindications to the 2 comparative chemotherapy agents (that is [i.e.] vinorelbine, oral or intravenous, and gemcitabine, intravenous)",
+            "original_value_phrase": "Known"
+          }
+        ]
+      }
+    ]
+  }
+}

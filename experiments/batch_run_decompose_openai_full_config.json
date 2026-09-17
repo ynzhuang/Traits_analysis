@@ -1,0 +1,19 @@
+{
+  "input_files": [
+    "data/immune_checkpoint_inhibitor_trials_eligibility_criteria.json"
+  ],
+  "prompt_template": "prompts/ici_trial_eligibility_criteria_decompose_prompt.md",
+  "api_keys_file": "api_keys.json",
+  "models": [
+    {
+      "provider": "openai",
+      "model_name": "gpt-4o"
+    }
+  ],
+  "output_directory": "outputs/batch_experiments",
+  "cache_enabled": true,
+  "retry_count": 0,
+  "retry_delay": 1.0,
+  "show_progress": true,
+  "estimate_costs": true
+}

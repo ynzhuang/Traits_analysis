@@ -1,0 +1,27 @@
+{
+  "input_files": [
+    "sample_data/ici_criteria_sample_5.json"
+  ],
+  "prompt_template": "prompts/ici_trial_eligibility_criteria_decompose_prompt.md",
+  "api_keys_file": "api_keys.json",
+  "models": [
+    {
+      "provider": "openai",
+      "model_name": "gpt-4o"
+    },
+    {
+      "provider": "claude", 
+      "model_name": "claude-sonnet-4"
+    },
+    {
+      "provider": "gemini",
+      "model_name": "gemini-2.5-pro"
+    }
+  ],
+  "output_directory": "outputs/batch_experiments",
+  "cache_enabled": true,
+  "retry_count": 0,
+  "retry_delay": 1.0,
+  "show_progress": true,
+  "estimate_costs": true
+}

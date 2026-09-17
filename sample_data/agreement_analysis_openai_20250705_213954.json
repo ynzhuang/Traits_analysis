@@ -1,0 +1,760 @@
+{
+  "analysis_metadata": {
+    "total_trials": 1,
+    "total_criteria": 30,
+    "total_reviewers": 3,
+    "reviewer_identifiers": [
+      "gemini-gemini",
+      "openai-gpt",
+      "claude-claude"
+    ],
+    "analysis_timestamp": "2023-11-19T18:25:43Z"
+  },
+  "agreement_summary": {
+    "overall": {
+      "total_traits": 90,
+      "total_criteria": 30,
+      "total_reviewers": 3,
+      "agreement_distribution": {
+        "perfect_agreement": 20,
+        "majority_agreement": 8,
+        "no_agreement": 2
+      }
+    }
+  },
+  "trials": [
+    {
+      "trial_id": "NCT03191786",
+      "total_criteria": 30,
+      "total_unique_traits": 90,
+      "agreement_distribution": {
+        "perfect_agreement": 20,
+        "majority_agreement": 8,
+        "no_agreement": 2
+      },
+      "criteria": [
+        {
+          "criterion_index": 0,
+          "type": "inclusion",
+          "original_text": "Histologically or cytologically confirmed diagnosis of advanced or recurrent (Stage IIIB not amenable for multimodality treatment) or metastatic (Stage IV) NSCLC as per the American Joint Committee on Cancer (AJCC) 7th edition",
+          "consensus_logic": "(diagnosis == 'NSCLC') AND (stage == 'IIIB or IV')",
+          "total_unique_traits": 2,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Diagnosis|Diagnosis/Disease|NSCLC",
+              "normalized_trait_name": "Diagnosis",
+              "normalized_category": "Diagnosis/Disease",
+              "normalized_value": "NSCLC",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Stage|Diagnosis/Disease|IIIB or IV",
+              "normalized_trait_name": "Stage",
+              "normalized_category": "Diagnosis/Disease",
+              "normalized_value": "IIIB or IV",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 1,
+          "type": "inclusion",
+          "original_text": "No sensitizing epidermal growth factor receptor (EGFR) mutation (L858R or exon 19 deletions) or anaplastic lymphoma kinase (ALK) fusion oncogene detected",
+          "consensus_logic": "(egfr_mutation == 'negative') AND (alk_fusion == 'negative')",
+          "total_unique_traits": 2,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "EGFR mutation|Biomarkers/Molecular|negative",
+              "normalized_trait_name": "EGFR mutation",
+              "normalized_category": "Biomarkers/Molecular",
+              "normalized_value": "negative",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "ALK fusion|Biomarkers/Molecular|negative",
+              "normalized_trait_name": "ALK fusion",
+              "normalized_category": "Biomarkers/Molecular",
+              "normalized_value": "negative",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 2,
+          "type": "inclusion",
+          "original_text": "No prior systemic treatment for advanced or recurrent (Stage IIIB not amenable for multimodality treatment) or metastatic (Stage IV) NSCLC as per the AJCC 7th edition",
+          "consensus_logic": "(prior_systemic_treatment == 'none')",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Prior systemic treatment|Prior/Concurrent Treatments|none",
+              "normalized_trait_name": "Prior systemic treatment",
+              "normalized_category": "Prior/Concurrent Treatments",
+              "normalized_value": "none",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 3,
+          "type": "inclusion",
+          "original_text": "Life expectancy greater than or equal to (>/=) 8 weeks",
+          "consensus_logic": "(life_expectancy >= '8 weeks')",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Life expectancy|Other|>=8 weeks",
+              "normalized_trait_name": "Life expectancy",
+              "normalized_category": "Other",
+              "normalized_value": ">=8 weeks",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 4,
+          "type": "inclusion",
+          "original_text": "Deemed unsuitable by the investigator for any platinum-doublet chemotherapy due to poor performance status (ECOG performance status of 2-3). However, participants >= 70 years of age who have an ECOG PS of 0 or 1 may be included due to: a) substantial comorbidities; b) contraindication(s) for any platinum-doublet chemotherapy",
+          "consensus_logic": "(unsuitable_for_platinum_doublet_chemo == True)",
+          "total_unique_traits": 3,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 66.67,
+          "traits": [
+            {
+              "consensus_trait_signature": "Suitability for platinum-doublet chemo|Other|unsuitable",
+              "normalized_trait_name": "Suitability for platinum-doublet chemo",
+              "normalized_category": "Other",
+              "normalized_value": "unsuitable",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "ECOG PS|Performance Status/Functional Status|2-3",
+              "normalized_trait_name": "ECOG PS",
+              "normalized_category": "Performance Status/Functional Status",
+              "normalized_value": "2-3",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Age|Demographics|>=70",
+              "normalized_trait_name": "Age",
+              "normalized_category": "Demographics",
+              "normalized_value": ">=70",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 5,
+          "type": "inclusion",
+          "original_text": "Representative formalin-fixed paraffin-embedded (FPPE) tumor tissue block obtained during course of disease (archival tissue) or at screening",
+          "consensus_logic": "(tumor_tissue_sample == 'available')",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Tumor tissue sample|Procedures|available",
+              "normalized_trait_name": "Tumor tissue sample",
+              "normalized_category": "Procedures",
+              "normalized_value": "available",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 6,
+          "type": "inclusion",
+          "original_text": "Participants with treated, asymptomatic central nervous system (CNS) metastases are eligible, provided they meet all of the following criteria: Measurable disease outside CNS; Only supratentorial and cerebellar metastases allowed; No ongoing requirement for corticosteroids as therapy for CNS disease; No stereotactic radiation within 7 days or whole-brain radiation within 14 days prior to randomization; No evidence of interim progression between the completion of CNS-directed therapy and the screening radiographic study",
+          "consensus_logic": "(cns_metastases_status == 'treated_and_asymptomatic') AND (measurable_disease_outside_cns == True) AND (corticosteroid_use_for_cns_disease == 'none') AND (time_since_stereotactic_radiation > '7 days') AND (time_since_whole_brain_radiation > '14 days') AND (cns_disease_progression == 'none')",
+          "total_unique_traits": 7,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 85.71,
+          "traits": [
+            {
+              "consensus_trait_signature": "CNS metastases status|Diagnosis/Disease|treated and asymptomatic",
+              "normalized_trait_name": "CNS metastases status",
+              "normalized_category": "Diagnosis/Disease",
+              "normalized_value": "treated and asymptomatic",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Measurable disease location|Diagnosis/Disease|outside CNS",
+              "normalized_trait_name": "Measurable disease location",
+              "normalized_category": "Diagnosis/Disease",
+              "normalized_value": "outside CNS",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "CNS metastases location|Diagnosis/Disease|supratentorial and cerebellar only",
+              "normalized_trait_name": "CNS metastases location",
+              "normalized_category": "Diagnosis/Disease",
+              "normalized_value": "supratentorial and cerebellar only",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Corticosteroid use for CNS disease|Medications|none",
+              "normalized_trait_name": "Corticosteroid use for CNS disease",
+              "normalized_category": "Medications",
+              "normalized_value": "none",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Time since stereotactic radiation|Prior/Concurrent Treatments|>7 days",
+              "normalized_trait_name": "Time since stereotactic radiation",
+              "normalized_category": "Prior/Concurrent Treatments",
+              "normalized_value": ">7 days",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Time since whole-brain radiation|Prior/Concurrent Treatments|>14 days",
+              "normalized_trait_name": "Time since whole-brain radiation",
+              "normalized_category": "Prior/Concurrent Treatments",
+              "normalized_value": ">14 days",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "CNS disease progression|Diagnosis/Disease|none",
+              "normalized_trait_name": "CNS disease progression",
+              "normalized_category": "Diagnosis/Disease",
+              "normalized_value": "none",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 7,
+          "type": "inclusion",
+          "original_text": "Adequate hematologic and end organ function",
+          "consensus_logic": "(hematologic_and_end_organ_function == 'adequate')",
+          "total_unique_traits": 2,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Hematologic function|Laboratory|adequate",
+              "normalized_trait_name": "Hematologic function",
+              "normalized_category": "Laboratory",
+              "normalized_value": "adequate",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "End organ function|Organ Function|adequate",
+              "normalized_trait_name": "End organ function",
+              "normalized_category": "Organ Function",
+              "normalized_value": "adequate",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 8,
+          "type": "inclusion",
+          "original_text": "Female participants of childbearing potential randomized to the atezolizumab treatment arm agree to use protocol defined methods of contraception",
+          "consensus_logic": "(contraception_agreement == 'agreed')",
+          "total_unique_traits": 2,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Contraception agreement|Reproductive/Pregnancy Status|agreed",
+              "normalized_trait_name": "Contraception agreement",
+              "normalized_category": "Reproductive/Pregnancy Status",
+              "normalized_value": "agreed",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Female of childbearing potential|Reproductive/Pregnancy Status|true",
+              "normalized_trait_name": "Female of childbearing potential",
+              "normalized_category": "Reproductive/Pregnancy Status",
+              "normalized_value": "true",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 9,
+          "type": "exclusion",
+          "original_text": "Participants younger than 70 years who have an ECOG performance status of 0 or 1",
+          "consensus_logic": "(age < 70) AND (ecog_ps IN ['0', '1'])",
+          "total_unique_traits": 2,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Age|Demographics|<70",
+              "normalized_trait_name": "Age",
+              "normalized_category": "Demographics",
+              "normalized_value": "<70",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "ECOG PS|Performance Status/Functional Status|0-1",
+              "normalized_trait_name": "ECOG PS",
+              "normalized_category": "Performance Status/Functional Status",
+              "normalized_value": "0-1",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 10,
+          "type": "exclusion",
+          "original_text": "Active or untreated CNS metastases as determined by computed tomography (CT) or magnetic resonance imaging (MRI) evaluation of the brain during screening and prior radiographic assessments",
+          "consensus_logic": "(cns_metastases_status == 'active_or_untreated')",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "CNS metastases status|Diagnosis/Disease|active or untreated",
+              "normalized_trait_name": "CNS metastases status",
+              "normalized_category": "Diagnosis/Disease",
+              "normalized_value": "active or untreated",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 11,
+          "type": "exclusion",
+          "original_text": "Uncontrolled tumor-related pain",
+          "consensus_logic": "(tumor_related_pain == 'uncontrolled')",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Tumor-related pain|Comorbidities|uncontrolled",
+              "normalized_trait_name": "Tumor-related pain",
+              "normalized_category": "Comorbidities",
+              "normalized_value": "uncontrolled",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 12,
+          "type": "exclusion",
+          "original_text": "Uncontrolled pleural effusion, pericardial effusion, or ascites requiring recurrent drainage procedures (once monthly or more frequently)",
+          "consensus_logic": "(pleural_effusion == 'uncontrolled') OR (pericardial_effusion == 'uncontrolled') OR (ascites == 'uncontrolled')",
+          "total_unique_traits": 3,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Pleural effusion|Comorbidities|uncontrolled",
+              "normalized_trait_name": "Pleural effusion",
+              "normalized_category": "Comorbidities",
+              "normalized_value": "uncontrolled",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Pericardial effusion|Comorbidities|uncontrolled",
+              "normalized_trait_name": "Pericardial effusion",
+              "normalized_category": "Comorbidities",
+              "normalized_value": "uncontrolled",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Ascites|Comorbidities|uncontrolled",
+              "normalized_trait_name": "Ascites",
+              "normalized_category": "Comorbidities",
+              "normalized_value": "uncontrolled",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 13,
+          "type": "exclusion",
+          "original_text": "Uncontrolled or symptomatic hyerpcalcemia (ionized calcium > 1.5 mmol/L or calcium >12 mg/dL or corrected serum calcium >ULN)",
+          "consensus_logic": "(hypercalcemia == 'uncontrolled or symptomatic')",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Hypercalcemia|Laboratory|uncontrolled or symptomatic",
+              "normalized_trait_name": "Hypercalcemia",
+              "normalized_category": "Laboratory",
+              "normalized_value": "uncontrolled or symptomatic",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 14,
+          "type": "exclusion",
+          "original_text": "History of other malignancy within 5 years prior to screening, with the exception of those with a negligible risk of metastasis or death treated with expected curative outcome",
+          "consensus_logic": "(history_of_other_malignancy_within_5_years == True)",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 66.67,
+          "traits": [
+            {
+              "consensus_trait_signature": "History of other malignancy within 5 years|Comorbidities|present with exceptions",
+              "normalized_trait_name": "History of other malignancy within 5 years",
+              "normalized_category": "Comorbidities",
+              "normalized_value": "present with exceptions",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 15,
+          "type": "exclusion",
+          "original_text": "National Cancer Institute Common Terminology Criteria for Adverse Events (NCI CTCAE) version 4.0 (v4.0) Grade 3 or higher toxicities due to any prior therapy (example [e.g.], radiotherapy) (excluding alopecia), which have not shown improvement and are strictly considered to interfere with current study medication",
+          "consensus_logic": "(prior_therapy_toxicity_grade >= 3)",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 66.67,
+          "traits": [
+            {
+              "consensus_trait_signature": "Prior therapy toxicity|Prior/Concurrent Treatments|>=Grade 3 and unresolved",
+              "normalized_trait_name": "Prior therapy toxicity",
+              "normalized_category": "Prior/Concurrent Treatments",
+              "normalized_value": ">=Grade 3 and unresolved",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 16,
+          "type": "exclusion",
+          "original_text": "Participants who have received prior neo-adjuvant, adjuvant chemotherapy, radiotherapy, or chemoradiotherapy with curative intent for non-metastatic disease must have experienced a treatment-free interval of at least 6 months from randomization since the last chemotherapy, radiotherapy, or chemoradiotherapy",
+          "consensus_logic": "(treatment_free_interval_from_prior_therapy < '6 months')",
+          "total_unique_traits": 2,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 66.67,
+          "traits": [
+            {
+              "consensus_trait_signature": "Treatment-free interval from prior therapy|Prior/Concurrent Treatments|<6 months",
+              "normalized_trait_name": "Treatment-free interval from prior therapy",
+              "normalized_category": "Prior/Concurrent Treatments",
+              "normalized_value": "<6 months",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Prior neo-adjuvant treatment|Prior/Concurrent Treatments|true",
+              "normalized_trait_name": "Prior neo-adjuvant treatment",
+              "normalized_category": "Prior/Concurrent Treatments",
+              "normalized_value": "true",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 17,
+          "type": "exclusion",
+          "original_text": "History of autoimmune disease except autoimmune-related hypothyroidism and controlled Type I diabetes mellitus",
+          "consensus_logic": "(history_of_autoimmune_disease == True)",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 66.67,
+          "traits": [
+            {
+              "consensus_trait_signature": "History of autoimmune disease|Comorbidities|present with exceptions",
+              "normalized_trait_name": "History of autoimmune disease",
+              "normalized_category": "Comorbidities",
+              "normalized_value": "present with exceptions",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 18,
+          "type": "exclusion",
+          "original_text": "History of idiopathic pulmonary fibrosis (IPF), organizing pneumonia (e.g., bronchiolitis obliterans), drug-induced pneumonitis, idiopathic pneumonitis, or evidence of active pneumonitis",
+          "consensus_logic": "(history_of_ipf == True) OR (history_of_organizing_pneumonia == True) OR (history_of_drug_induced_pneumonitis == True) OR (history_of_idiopathic_pneumonitis == True) OR (active_pneumonitis == True)",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 66.67,
+          "traits": [
+            {
+              "consensus_trait_signature": "History of specific pulmonary conditions|Comorbidities|present",
+              "normalized_trait_name": "History of specific pulmonary conditions",
+              "normalized_category": "Comorbidities",
+              "normalized_value": "present",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 19,
+          "type": "exclusion",
+          "original_text": "Known positivity for human immunodeficiency virus (HIV)",
+          "consensus_logic": "(hiv_status == 'positive')",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "HIV status|Infection/Immunization|positive",
+              "normalized_trait_name": "HIV status",
+              "normalized_category": "Infection/Immunization",
+              "normalized_value": "positive",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 20,
+          "type": "exclusion",
+          "original_text": "Known active hepatitis B or hepatitis C",
+          "consensus_logic": "(hepatitis_b_status == 'active') OR (hepatitis_c_status == 'active')",
+          "total_unique_traits": 2,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Hepatitis B status|Infection/Immunization|active",
+              "normalized_trait_name": "Hepatitis B status",
+              "normalized_category": "Infection/Immunization",
+              "normalized_value": "active",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Hepatitis C status|Infection/Immunization|active",
+              "normalized_trait_name": "Hepatitis C status",
+              "normalized_category": "Infection/Immunization",
+              "normalized_value": "active",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 21,
+          "type": "exclusion",
+          "original_text": "Active tuberculosis",
+          "consensus_logic": "(tuberculosis_status == 'active')",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Tuberculosis status|Infection/Immunization|active",
+              "normalized_trait_name": "Tuberculosis status",
+              "normalized_category": "Infection/Immunization",
+              "normalized_value": "active",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 22,
+          "type": "exclusion",
+          "original_text": "Severe infections within 4 weeks prior to randomization",
+          "consensus_logic": "(recent_severe_infections == True)",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Recent severe infections|Infection/Immunization|present",
+              "normalized_trait_name": "Recent severe infections",
+              "normalized_category": "Infection/Immunization",
+              "normalized_value": "present",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 23,
+          "type": "exclusion",
+          "original_text": "Significant cardiovascular disease, such as New York Heart Association (NYHA) cardiac disease (Class II or greater), myocardial infarction within 3 months prior to randomization, unstable arrhythmias, or unstable angina",
+          "consensus_logic": "(nyha_class >= 'II') OR (myocardial_infarction_within_3_months == True) OR (unstable_arrhythmias == True) OR (unstable_angina == True)",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 66.67,
+          "traits": [
+            {
+              "consensus_trait_signature": "Significant cardiovascular disease|Comorbidities|present",
+              "normalized_trait_name": "Significant cardiovascular disease",
+              "normalized_category": "Comorbidities",
+              "normalized_value": "present",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 24,
+          "type": "exclusion",
+          "original_text": "Major surgical procedure other than for diagnosis within 4 weeks prior to randomization or anticipation of need for a major surgical procedure during the course of the study",
+          "consensus_logic": "(recent_major_surgery_within_4_weeks == True) OR (anticipated_major_surgery == True)",
+          "total_unique_traits": 2,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 66.67,
+          "traits": [
+            {
+              "consensus_trait_signature": "Recent major surgery|Procedures|present",
+              "normalized_trait_name": "Recent major surgery",
+              "normalized_category": "Procedures",
+              "normalized_value": "present",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Anticipated major surgery|Procedures|present",
+              "normalized_trait_name": "Anticipated major surgery",
+              "normalized_category": "Procedures",
+              "normalized_value": "present",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 25,
+          "type": "exclusion",
+          "original_text": "Prior allogeneic bone marrow transplantation or solid organ transplant",
+          "consensus_logic": "(prior_allogeneic_bmt == True) OR (prior_solid_organ_transplant == True)",
+          "total_unique_traits": 2,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 66.67,
+          "traits": [
+            {
+              "consensus_trait_signature": "Prior allogeneic BMT|Prior/Concurrent Treatments|present",
+              "normalized_trait_name": "Prior allogeneic BMT",
+              "normalized_category": "Prior/Concurrent Treatments",
+              "normalized_value": "present",
+              "reviewer_extractions": null
+            },
+            {
+              "consensus_trait_signature": "Prior solid organ transplant|Prior/Concurrent Treatments|present",
+              "normalized_trait_name": "Prior solid organ transplant",
+              "normalized_category": "Prior/Concurrent Treatments",
+              "normalized_value": "present",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 26,
+          "type": "exclusion",
+          "original_text": "Participants with an illness or condition that may interfere with capacity or compliance with the study protocol, as per investigator's judgment",
+          "consensus_logic": "(interfering_condition == True)",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Interfering condition|Other|present",
+              "normalized_trait_name": "Interfering condition",
+              "normalized_category": "Other",
+              "normalized_value": "present",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 27,
+          "type": "exclusion",
+          "original_text": "Treatment with any other investigational agent or participation in another clinical study with therapeutic intent within 28 days prior to randomization",
+          "consensus_logic": "(concurrent_investigational_agent_or_study == True)",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Concurrent investigational agent or study|Prior/Concurrent Treatments|present",
+              "normalized_trait_name": "Concurrent investigational agent or study",
+              "normalized_category": "Prior/Concurrent Treatments",
+              "normalized_value": "present",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 28,
+          "type": "exclusion",
+          "original_text": "History of severe allergic, anaphylactic, or other hypersensitivity reactions to chimeric or humanized antibodies or fusion proteins",
+          "consensus_logic": "(history_of_hypersensitivity_to_antibodies == True)",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "History of hypersensitivity to antibodies|Comorbidities|present",
+              "normalized_trait_name": "History of hypersensitivity to antibodies",
+              "normalized_category": "Comorbidities",
+              "normalized_value": "present",
+              "reviewer_extractions": null
+            }
+          ]
+        },
+        {
+          "criterion_index": 29,
+          "type": "exclusion",
+          "original_text": "Known hypersensitivity to biopharmaceuticals produced in Chinese hamster ovary cells or any component of the atezolizumab formulation",
+          "consensus_logic": "(hypersensitivity_to_atezolizumab_components == True)",
+          "total_unique_traits": 1,
+          "reviewer_trait_counts": null,
+          "trait_overlap_percentage": 100.0,
+          "traits": [
+            {
+              "consensus_trait_signature": "Hypersensitivity to atezolizumab components|Medications|present",
+              "normalized_trait_name": "Hypersensitivity to atezolizumab components",
+              "normalized_category": "Medications",
+              "normalized_value": "present",
+              "reviewer_extractions": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "semantic_normalization_log": [
+    {
+      "original_variations": [
+        "ECOG PS",
+        "ECOG Performance Status",
+        "Performance Status"
+      ],
+      "normalized_form": "ECOG PS",
+      "normalization_rule": "synonym_mapping",
+      "affected_reviewers": [
+        "gemini-gemini",
+        "openai-gpt",
+        "claude-claude"
+      ]
+    },
+    {
+      "original_variations": [
+        "NSCLC",
+        "Non-Small Cell Lung Cancer"
+      ],
+      "normalized_form": "NSCLC",
+      "normalization_rule": "abbreviation_standardization",
+      "affected_reviewers": [
+        "gemini-gemini",
+        "openai-gpt",
+        "claude-claude"
+      ]
+    },
+    {
+      "original_variations": [
+        "FPPE",
+        "formalin-fixed paraffin-embedded"
+      ],
+      "normalized_form": "FPPE",
+      "normalization_rule": "abbreviation_standardization",
+      "affected_reviewers": [
+        "gemini-gemini",
+        "openai-gpt",
+        "claude-claude"
+      ]
+    }
+  ],
+  "quality_metrics": {
+    "trait_extraction_consistency": 0.9,
+    "category_assignment_consistency": 0.85,
+    "value_specification_consistency": 0.8,
+    "granularity_consistency": 0.75
+  }
+}
