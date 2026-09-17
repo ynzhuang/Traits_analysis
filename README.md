@@ -25,32 +25,32 @@ The Clinical Trial Criteria Analyzer transforms unstructured eligibility criteri
 ## 🏗️ System Architecture
 
 ```mermaid
-graph TB
-    subgraph "Input Layer"
-        A[Clinical Trial Criteria<br/>JSON Files]
-        B[API Keys<br/>Configuration]
-        C[Prompt Templates<br/>Markdown Files]
+flowchart TB
+    subgraph input["Input Layer"]
+        A["Clinical Trial Criteria<br/>JSON Files"]
+        B["API Keys<br/>Configuration"]
+        C["Prompt Templates<br/>Markdown Files"]
     end
-    
-    subgraph "Processing Layer"
-        D[decompose_criteria.py<br/>Main Decomposition Script]
-        E[Service Layer<br/>LLM Abstraction]
-        F[Multiple AI Models<br/>OpenAI | Claude | Gemini]
+
+    subgraph processing["Processing Layer"]
+        D["decompose_criteria.py<br/>Main Decomposition Script"]
+        E["Service Layer<br/>LLM Abstraction"]
+        F["Multiple AI Models<br/>OpenAI / Claude / Gemini"]
     end
-    
-    subgraph "Analysis Layer"
-        G[analyze_criteria_agreement.py<br/>Agreement Analysis]
-        H[Local Analysis<br/>Rule-based Matching]
-        I[LLM Analysis<br/>Semantic Understanding]
+
+    subgraph analysis["Analysis Layer"]
+        G["analyze_criteria_decomposition_agreement.py<br/>Agreement Analysis"]
+        H["Local Analysis<br/>Rule-based Matching"]
+        I["LLM Analysis<br/>Semantic Understanding"]
     end
-    
-    subgraph "Output Layer"
-        J[Structured JSON<br/>Decomposed Traits]
-        K[Agreement Reports<br/>Markdown & JSON]
-        L[Quality Metrics<br/>Statistical Analysis]
-        M[Discrepancy Analysis<br/>Detailed Explanations]
+
+    subgraph output["Output Layer"]
+        J["Structured JSON<br/>Decomposed Traits"]
+        K["Agreement Reports<br/>Markdown + JSON"]
+        L["Quality Metrics<br/>Statistical Analysis"]
+        M["Discrepancy Analysis<br/>Detailed Explanations"]
     end
-    
+
     A --> D
     B --> E
     C --> D
@@ -64,7 +64,7 @@ graph TB
     I --> K
     K --> L
     K --> M
-    
+
     style A fill:#e1f5fe
     style J fill:#e8f5e8
     style K fill:#e8f5e8
@@ -76,7 +76,7 @@ graph TB
 
 ### Prerequisites
 
-- Python 3.8 or higher
+- Python 3.10 or higher
 - API keys for at least one LLM provider (OpenAI, Claude, or Gemini)
 - Git (for cloning the repository)
 
@@ -84,8 +84,8 @@ graph TB
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
-   cd criteria-analyzer
+   git clone https://github.com/ynzhuang/Traits_analysis.git
+   cd Traits_analysis
    ```
 
 2. **Install dependencies**:
@@ -260,10 +260,10 @@ The recent schema reorganization provides several key improvements:
 #### 🔄 **Migration Path**
 
 ```mermaid
-graph LR
-    A[Legacy Models<br/>Inline Definitions] --> B[Structured Schemas<br/>schemas/ Package]
-    B --> C[Enhanced Features<br/>Rich Metadata]
-    
+flowchart LR
+    A["Legacy Models<br/>Inline Definitions"] --> B["Structured Schemas<br/>schemas/ package"]
+    B --> C["Enhanced Features<br/>Rich Metadata"]
+
     style A fill:#ffcccc
     style B fill:#fff3e0
     style C fill:#ccffcc
@@ -329,29 +329,29 @@ The system uses a comprehensive schema architecture with structured Pydantic mod
 ### Schema Organization
 
 ```mermaid
-graph TD
-    A[Project Root] --> B[schemas/]
-    B --> C[__init__.py<br/>Main exports]
-    B --> D[trait.py<br/>Trait model]
-    B --> E[criterion.py<br/>Criterion model]
-    B --> F[trial.py<br/>Trial + DecomposedCriteria]
-    B --> G[agreement_analysis/]
-    
-    G --> H[__init__.py<br/>Analysis exports]
-    G --> I[trait_level.py<br/>TraitComparison, TraitLevelAgreement]
-    G --> J[criterion_level.py<br/>CriterionLevelAgreement]
-    G --> K[overall.py<br/>OverallAgreement]
-    G --> L[summary.py<br/>AgreementSummary]
-    G --> M[discrepancy.py<br/>Discrepancy Analysis]
-    G --> N[analysis.py<br/>Main Analysis Models]
-    
-    O[decompose_criteria.py] -.->|imports| D
+flowchart TD
+    A["Project Root"] --> B["schemas/"]
+    B --> C["__init__.py<br/>Main exports"]
+    B --> D["trait.py<br/>Trait model"]
+    B --> E["criterion.py<br/>Criterion model"]
+    B --> F["trial.py<br/>Trial + DecomposedCriteria"]
+    B --> G["agreement_analysis/"]
+
+    G --> H["__init__.py<br/>Analysis exports"]
+    G --> I["trait_level.py<br/>TraitComparison, TraitLevelAgreement"]
+    G --> J["criterion_level.py<br/>CriterionLevelAgreement"]
+    G --> K["overall.py<br/>OverallAgreement"]
+    G --> L["summary.py<br/>AgreementSummary"]
+    G --> M["discrepancy.py<br/>Discrepancy Analysis"]
+    G --> N["analysis.py<br/>Main Analysis Models"]
+
+    O["decompose_criteria.py"] -.->|imports| D
     O -.->|imports| E
     O -.->|imports| F
-    
-    P[analyze_criteria_decomposition_agreement.py] -.->|imports| D
+
+    P["analyze_criteria_decomposition_agreement.py"] -.->|imports| D
     P -.->|imports| G
-    
+
     style B fill:#e1f5fe
     style D fill:#ccffcc
     style E fill:#ccffcc
@@ -362,38 +362,33 @@ graph TD
 ### Core Model Hierarchy
 
 ```mermaid
-graph TB
-    subgraph "Core Schema Hierarchy"
-        A[Trial<br/>- trial_id: str<br/>- title: Optional[str]<br/>- nct_number: Optional[str]<br/>- phase: Optional[str]<br/>- status: Optional[str]<br/>- sponsor: Optional[str]]
-        
-        B[DecomposedCriteria<br/>- trial: Trial<br/>- criteria: List[Criterion]]
-        
-        C[Criterion<br/>- type: str<br/>- original_text: str<br/>- logic: str<br/>- traits: List[Trait]]
-        
-        D[Trait<br/>- trait: str<br/>- category: str<br/>- value: str<br/>- source_text: str<br/>- original_trait_phrase: str<br/>- original_value_phrase: str]
-        
+flowchart TB
+    subgraph core["Core Schema Hierarchy"]
+        A["Trial<br/>trial_id: str<br/>title: Optional(str)<br/>nct_number: Optional(str)<br/>phase: Optional(str)<br/>status: Optional(str)<br/>sponsor: Optional(str)"]
+        B["DecomposedCriteria<br/>trial: Trial<br/>criteria: List of Criterion"]
+        C["Criterion<br/>type: str<br/>original_text: str<br/>logic: str<br/>traits: List of Trait"]
+        D["Trait<br/>trait: str<br/>category: str<br/>value: str<br/>source_text: str<br/>original_trait_phrase: str<br/>original_value_phrase: str"]
+
         A --> B
         B --> C
         C --> D
     end
-    
-    subgraph "Agreement Analysis Schema"
-        E[AgreementAnalysisResult<br/>- analysis_id: str<br/>- trial_id: str<br/>- overall_agreement: OverallAgreement<br/>- discrepancy_analyses: List[DiscrepancyAnalysis]]
-        
-        F[OverallAgreement<br/>- trial_id: str<br/>- criterion_agreements: List[CriterionLevelAgreement]<br/>- overall_agreement_score: float]
-        
-        G[TraitLevelAgreement]
-        H[CriterionLevelAgreement]
-        I[DiscrepancyAnalysis]
-        
+
+    subgraph agreement["Agreement Analysis Schema"]
+        E["AgreementAnalysisResult<br/>analysis_id: str<br/>trial_id: str<br/>overall_agreement: OverallAgreement<br/>discrepancy_analyses: List of DiscrepancyAnalysis"]
+        F["OverallAgreement<br/>trial_id: str<br/>criterion_agreements: List of CriterionLevelAgreement<br/>overall_agreement_score: float"]
+        G["TraitLevelAgreement"]
+        H["CriterionLevelAgreement"]
+        I["DiscrepancyAnalysis"]
+
         E --> F
         E --> I
         F --> H
         H --> G
     end
-    
+
     D -.->|used in| G
-    
+
     style A fill:#e8f5e8
     style B fill:#e8f5e8
     style C fill:#e8f5e8
